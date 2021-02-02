@@ -1,2 +1,2 @@
 # DS-producao
-This repo contains scripts for training in the course DS in production
+This repo contains scripts for training purposes for the course data science hands on projects.
