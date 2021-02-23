@@ -1,3 +1,3 @@
 Rossmann Sales Project
 
-This repo contains scripts for the project of prediction of sales for Rossmann Stores.
+This repo contains scripts for the project of sales prediction for Rossmann Stores.
