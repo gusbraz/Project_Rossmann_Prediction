@@ -1,2 +1,2 @@
-# DS-producao
-This repo contains scripts for training purposes for the course data science hands on projects.
+# DS hands on
+This repo contains scripts for the project of prediction of sales for Rossmann Stores.
