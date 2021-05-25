@@ -1,4 +1,5 @@
-Rossmann Sales Project
+<h1 align="center">Rossmann Sales Project</h1>
+
 
 This repo contains scripts for the project of sales prediction for Rossmann Stores.
 
