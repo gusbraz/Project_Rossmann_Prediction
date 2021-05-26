@@ -36,12 +36,12 @@ __Formato da entrega:__
 
 ## Ferramentas utilizadas
 
-* Linguagem: Python
-* IDE: Jupyter notebook
-* Libraries: encontradas no arquivo requirements.txt nesse repositório
-* ML models: Linear Regression, Lasso Linear Regression, Random Forest Regressor e XGBoost Regressor.
-* API: Flask, Telegram
-* Cloud: Heroku
+* __Linguagem:__ Python
+* __IDE:__ Jupyter notebook
+* __Libraries:__ encontradas no arquivo requirements.txt nesse repositório
+* __ML models:__ Linear Regression, Lasso Linear Regression, Random Forest Regressor e XGBoost Regressor.
+* __API:__ Flask, Telegram
+* __Cloud:__ Heroku
 
 ## Estratégia de solução - 10 Etapas
 
@@ -131,7 +131,7 @@ Linear Regression - Lasso |	2116.38 +/- 341.5 |	0.29 +/- 0.01 |	3057.75 +/- 504.
 
 * Com baso nos resultados acima, o __XGBoost__ foi selecionado por ser um modelo de tamanho menor que o Random Forest e ter uma acurácia próxima.
 
-### Etapa 08 - Hyperparameter Fine Tunig
+### Etapa 08 - Hyperparameter Fine Tuning
 
 * Utilizando a estratégia de random search para refinar o modelo XGboost;
 
