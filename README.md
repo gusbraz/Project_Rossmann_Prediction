@@ -43,7 +43,7 @@ __Formato da entrega:__
 * API: Flask, Telegram
 * Cloud: Heroku
 
-## Estratégia de solução
+## Estratégia de solução - 10 Etapas
 
 ### Etapa 01 - Descrição dos Dados
 
@@ -131,7 +131,7 @@ Linear Regression - Lasso |	2116.38 +/- 341.5 |	0.29 +/- 0.01 |	3057.75 +/- 504.
 
 * Com baso nos resultados acima, o __XGBoost__ foi selecionado por ser um modelo de tamanho menor que o Random Forest e ter uma acurácia próxima.
 
-### Etapa 08 - Hyperparameter Fine Tuninig
+### Etapa 08 - Hyperparameter Fine Tunig
 
 * Utilizando a estratégia de random search para refinar o modelo XGboost;
 
@@ -143,8 +143,15 @@ XGBoost Regressor |	664.974996 |	0.097529 |	957.774225
 	
 ### Etapa 09 - Interpretação e tradução do erro
 
+Gráficos para análise de erro do modelo em comparação as vendas reais.
 
+![error_rate](https://user-images.githubusercontent.com/78423995/119714406-37972e00-be39-11eb-998a-77150baaf6c0.png)
 
+A linha de previsão modelo esta sempre próximo da linha de vendas demonstra uma boa acurácia ao se manter próximo das vendas reais ao longo do tempo.
+
+A distribuição do erro está próxima da gaussiana.
+
+A análise de resíduo demonstra que o modelo tem uma acurácia muito boa para a grande maioria das lojas.
 
 ### Etapa 10 - Deploy do modelo
 
@@ -154,11 +161,15 @@ XGBoost Regressor |	664.974996 |	0.097529 |	957.774225
 * Integrar o bot do Telegram na cloud com o modelo Rossmann;
 * Teste do modelo pelo celular, via app Telegram.
 
-__Para verificar o resultado final no projeto acesse o bot *@Alicia_helper_bot* no telegram.__
+_Para verificar o resultado final no projeto acesse o bot **@Alicia_helper_bot** no telegram._
 
 ![Telegram_bot](https://user-images.githubusercontent.com/78423995/119694990-22fc6b00-be24-11eb-9202-74ed997a7e13.gif)
 
+## Próximos passos e melhorias futuras do modelo
 
+* Analisar a hipótese 05 no próximo ciclo do CRISP.
+* Analisar e erro para as lojas especificas em que o modelo apresentou baixa acurácia e treinar um modelo especifico para essas lojas.
+* Implementar a entrega de gráficos das vendas previstas pelo bot do Telegram.
 
 
 
