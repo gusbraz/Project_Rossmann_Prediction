@@ -6,17 +6,17 @@ Esse projeto é baseado na competição do kaggle - Rossmann Store Sales, dispon
 
 ## Questão de Negócio
 
-A Rossmann é uma grande rede de farmacias que possui mais de 3.000 unidades espalhadas em 7 paises europeus. Atualmente, os gerentes da Rossmann possuem a tarefa de realizar a previsão de vendas diárias de suas respectivas lojas nas proximas 6 semanas. As vendas das lojas são influenciadas por vários fatores, incluindo promoções, competidores, feriados, temporadas e localização da loja. Se cada gerente usar uma técnica para fazer a previsão de vendas da sua unidade os resultados vão variar demais, por isso foi pedido que seja criado um modelo que faça a previsão de cada loja baseado nas suas peculiaridades.
+A Rossmann é uma grande rede de farmácias que possui mais de 3 mil unidades espalhadas em 7 paises europeus. Atualmente, foi solicitado aos gerentes da Rossmann entregar uma previsão do total de vendas diárias durante as 6 semanas seguintes para suas respectivas lojas. As vendas das lojas podem ser influenciadas por diversos fatores, incluindo promoções, competidores, feriados, temporadas e localização da loja. Com milhares de gerentes individuais prevendo vendas com base em suas circunstâncias únicas, a precisão dos resultados pode ser bastante variada, por isso foi solicitado que seja criado um modelo que faça a previsão baseado nas peculiaridades de cada loja.
 
 ## Entendimento do Negócio
 
 ### Qual a motivação?
  
-A previsão de vendas foi requisitada aos gerentes pelo Chief Financial Officer (CFO) em uma reunião mensal.
+A previsão de vendas foi requisitada aos gerentes pelo Chief Financial Officer (CFO) durante a última reunião de gerência da companhia.
 
 ### Qual a causa raiz do problema? 
 
-O CFO vai realizar investimentos e reformas nas lojas e para fazer o orçamento desse investimento ele precisa de saber quanto cada loja vai vender nas próximas 6 semanas.
+O CFO realizará investimentos e reformas nas lojas e para calcular o orçamento desse investimento por loja, é de suma importância saber quanto cada loja venderá nas próximas 6 semanas.
 
 ### Quem é o Stakeholder?
 
@@ -24,59 +24,54 @@ o CFO da Rossmann.
 
 ### Qual será o formato da solução?
 
-__Granularidade:__ previsão de vendas por dia, por loja, acumulada para as próximas 6 semanas.
+__Granularidade:__ previsão por loja do valor total de vendas diárias acumulada durante as próximas 6 semanas.
 
 __Tipo de problema:__ previsão de vendas.
 
 __Potencias métodos:__ Regressão linear e séries temporais com algumas modificações.
 
 __Formato da entrega:__ 
-* O valor total de vendas, de cada loja no final da sexta semana.
-* O CFO poderá fazer essa consulta pelo celular, acessando um bot pelo app Telegram. 
+* Entregar relatório com o valor total de vendas diárias acumulada durante as próximas 6 semanas.
+* O CFO poderá fazer essa consulta através de seu celular, acessando um bot pelo app Telegram.
 
-## Ferramentas utilizadas
+## Ferramentas Utilizadas
 
-* __Linguagem:__ Python
-* __IDE:__ Jupyter notebook
-* __Libraries:__ encontradas no arquivo requirements.txt nesse repositório
+* __Linguagem:__ Python.
+* __IDE:__ Jupyter notebook.
+* __Libraries:__ encontradas no arquivo requirements.txt nesse repositório.
 * __ML models:__ Linear Regression, Lasso Linear Regression, Random Forest Regressor e XGBoost Regressor.
-* __API:__ Flask, Telegram
-* __Cloud:__ Heroku
+* __API:__ Flask, Telegram.
+* __Cloud:__ Heroku.
 
-## Estratégia de solução - 10 Etapas
+## Estratégia de Solução - 10 Etapas
 
 ### Etapa 01 - Descrição dos Dados
 
-Após baixar os dados e carrega-los no jupyter notebook, foram feitas os seguintes processos:
-* Verificação dos dados;
-* Renomear colunas;
-* Dimensão dos dados;
-* Tipo dos dados;
-* Dados faltantes e preenchimento dos dados faltantes;
-* Estátistica descritiva dos dados
-* Atributos numéricos
-* Atributos categóricos.
+Após baixar os dados e carregá-los no jupyter notebook, foram feitos os seguintes processos:
 
+* Verificação dos dados, conhecer a dimensão dos dados e tipo dos dados;
+* Renomeação de colunas e correção dos tipos dos dados;
+* Verificação dos dados faltantes e preenchimento dos mesmos com técnicas apropriadas para cada caso específico;
+* Realização da análise estátistica descritiva dos dados;
+* Verificação dos atributos numéricos e categóricos.
 
 ### Etapa 02 - Feature Engineering
 
-* Criação de uma lista de hipóteses;
+* Criação de uma lista de hipóteses, onde foram definidas 12 hipóteses a serem testadas;
 * Definição dos fenômenos, agentes e atributos;
-* Definição das features que serão criadas;
-* Derivação de features a partir das variáveis originais. 
+* Definição de features adicionais a serem criadas;
+* Derivação de features à partir das variáveis originais. 
 
 ### Etapa 03 - Filtragem de Variáveis
 
-* Análise e filtragem das variáveis de acordo com as restrições do negócio;
-* Filtragem de linhas e seleção de colunas de interesse.
+* Realização de análise e filtragem das variáveis de acordo com as restrições do negócio;
+* Realização de filtragem de linhas e seleção de colunas de interesse.
 
 ### Etapa 04 - Análise Explorátoria dos Dados (AED)
 
-* Análise Univariada;
-* Análise Bivariada;
-* Análise Multivariada;
-* Teste das hipóteses de acordo com as análises anteriores e correlações;
-* Conclusão do teste de hipóteses e definição da sua relevância. 
+* Realização das análises univariada, bivariada e multivariada;
+* Realização do teste das hipóteses de acordo com as análises anteriores e correlações das variáveis;
+* Conclusão do teste de hipóteses e definição de sua relevância. 
 
 Hipoteses  |  Conclusao  |  Relevancia
 ----------- |  ----------- | ------------
@@ -84,7 +79,7 @@ H1     |      Falsa    |    Baixa
 H2     |      Falsa    |    Media
 H3     |      Falsa    |    Media
 H4     |      Falsa    |    Baixa
-H5     |      _        |    -
+H5     |      -        |    -
 H6     |      False    |    Baixa
 H7     |      Falsa    |    Media
 H8     |      Falsa    |    Alta
@@ -93,47 +88,47 @@ H10    |     Verdadeira | Alta
 H11    |      Verdadeira |  Alta
 H12    |      Verdadeira |  Baixa
 
-Hipóteses que são verdadeiras e são mais relevantes para o modelo. 
-* __1.__ Lojas com maior sortimento não vendem mais.
+As hipóteses não confirmadas que podem gerar __insights__ importantes para o negócio. 
+* __1.__ As lojas com maior sortimento não vendem mais que as lojas com menor sortimento.
 * __2.__ As lojas com concorrentes mais próximos vendem mais.
-* __3.__ As lojas vendem menos nas férias escolares (exceto durante o verão).
+* __3.__ As lojas vendem menos nas férias escolares, exceto nos meses de julho e agosto.
 
 ### Etapa 05 - Preparação dos Dados 
 
-* Normalização dos dados. (Não foi necessária)
-* Rescaling dos dados numéricos;
+* Não foi necessário realizar a normalização dos dados; 
+* Realização do rescaling dos dados numéricos;
 * Transformação dos dados categóricos em numéricos;
-* Os dados cíclicos (como meses, semanas e dias) foram transformados usando funções trigonométricas matemáticas.
+* Transformação dos dados cíclicos como meses, semanas e dias utilizando funções trigonométricas matemáticas.
 
-### Etapa 06 - Seleção de variáveis
+### Etapa 06 - Seleção de Variáveis
 
-* Os recursos estatisticamente mais relevantes foram selecionados usando o pacote Boruta;
-* Manualmente as variáveis foram analisadas e as de interesse foram ao adicionadas a seleção final.
+* Os recursos estatisticamente mais relevantes foram selecionados utilizando a biblioteca Boruta;
+* Seleção manual das variáveis de interesse que foram adicionadas à seleção final de variáveis.
 
 ### Etapa 07 - Modelos de Machine Learning
 
 * Separação entre dados de treino e dados de teste;
-* Calculo do modelo de média para base comparativa dos outros modelos;
-* Execução de modelo de Regressão Linear;
-* Execução de modelo de Regressão Linear Regularizada;
-* Execução de modelo de Random Forest Regressor;
-* Execução de modelo de XGBoost Regressor;
+* Realização do cálculo do modelo de média para base comparativa dos outros modelos;
+* Execução do modelo de Regressão Linear;
+* Execução do modelo de Regressão Linear Regularizada;
+* Execução do modelo de Random Forest Regressor;
+* Execução do modelo de XGBoost Regressor;
 * Medição da performance real dos modelos com a técnica de Cross-Validation.
 
 __Resultados__
 
 Modelo | MAE |	MAPE |	RMSE
 -------- |  ------- | -------- | ------- 
-Random Forest Regressor |	836.61 +/- 217.1 |	0.12 +/- 0.02 |	1254.3 +/- 316.17
-XGBoost Regressor |	1030.28 +/- 167.19 |	0.14 +/- 0.02 |	1478.26 +/- 229.79
+__Random Forest Regressor__ |	836.61 +/- 217.1 |	0.12 +/- 0.02 |	1254.3 +/- 316.17
+__XGBoost Regressor__ |	1030.28 +/- 167.19 |	0.14 +/- 0.02 |	1478.26 +/- 229.79
 Linear Regression |	2081.73 +/- 295.63 |	0.3 +/- 0.02 |	2952.52 +/- 468.37
 Linear Regression - Lasso |	2116.38 +/- 341.5 |	0.29 +/- 0.01 |	3057.75 +/- 504.26
 
-* Com baso nos resultados acima, o __XGBoost__ foi selecionado por ser um modelo de tamanho menor que o Random Forest e ter uma acurácia próxima.
+Baseado nos resultados acima o modelo __XGBoost Regressor__ foi selecionado porque possui um modelo treinado de menor tamanho e utiliza menos poder de processamento, apesar de possuir o _MAE MAPE RMSE_ ligeiramente maiores que o modelo Random Forest.
 
 ### Etapa 08 - Hyperparameter Fine Tuning
 
-* Utilizando a estratégia de random search para refinar o modelo XGboost;
+* Utilização de técnica de random search para refinamento do modelo XGboost.
 
 Resultado final do modelo __XGBoost__ com refinamento
 
@@ -141,35 +136,35 @@ Modelo | MAE |	MAPE |	RMSE
 -------- |  ------- | -------- | ------- 
 XGBoost Regressor |	664.974996 |	0.097529 |	957.774225
 	
-### Etapa 09 - Interpretação e tradução do erro
+### Etapa 09 - Interpretação e Tradução do Erro
 
-Gráficos para análise de erro do modelo em comparação as vendas reais.
+Geração de gráficos comparando a diferença entre a previsão e a venda para análise de erro do modelo.
 
 ![error_rate](https://user-images.githubusercontent.com/78423995/119714406-37972e00-be39-11eb-998a-77150baaf6c0.png)
 
-A linha de previsão modelo esta sempre próximo da linha de vendas demonstra uma boa acurácia ao se manter próximo das vendas reais ao longo do tempo.
+A linha de previsão do modelo está próxima à linha de vendas, o que demonstra boa acurácia nas previsões ao se manter próximo à linha de vendas ao longo do tempo.
 
-A distribuição do erro está próxima da gaussiana.
+A distribuição do erro está próxima à curva gaussiana, demonstrando distribuição normal dos erros.
 
-A análise de resíduo demonstra que o modelo tem uma acurácia muito boa para a grande maioria das lojas.
+A análise de resíduo demonstra que o modelo possui boa acurácia na previsão para a grande maioria das lojas.
 
-### Etapa 10 - Deploy do modelo
+### Etapa 10 - Deploy do Modelo
 
-* Criar a classe Rossmann com o modelo de ML treinado;
-* Criar a API Handler no Flask;
-* Deploy do modelo na cloud (Heroku);
-* Integrar o bot do Telegram na cloud com o modelo Rossmann;
-* Teste do modelo pelo celular, via app Telegram.
+* Criação da classe Rossmann com o modelo de machine learning XGBoost treinado;
+* Criação da API Handler no Flask;
+* Realização do deploy do modelo na nuvem, no servidor Heroku;
+* Integração do bot do Telegram na nuvem com o modelo Rossmann no servidor Heroku;
+* Realização de teste do modelo final pelo celular, via app Telegram.
 
 _Para verificar o resultado final no projeto acesse o bot **@Alicia_helper_bot** no telegram._
 
 ![Telegram_bot](https://user-images.githubusercontent.com/78423995/119694990-22fc6b00-be24-11eb-9202-74ed997a7e13.gif)
 
-## Próximos passos e melhorias futuras do modelo
+## Melhorias a Serem Implementadas
 
-* Analisar a hipótese 05 no próximo ciclo do CRISP.
-* Analisar e erro para as lojas especificas em que o modelo apresentou baixa acurácia e treinar um modelo especifico para essas lojas.
-* Implementar a entrega de gráficos das vendas previstas pelo bot do Telegram.
+* Análise da hipótese 05 no próximo ciclo do CRISP, visando aumentar acurácia do modelo;
+* Análise do erro para as lojas específicas em que o modelo apresentou baixa acurácia e treinamento de um modelo específico para estas lojas;
+* Implementar no bot do Telegram a entrega de gráficos de vendas previstas.
 
 
 
