@@ -20,7 +20,7 @@ O CFO realizará investimentos e reformas nas lojas e para calcular o orçamento
 
 ### Quem é o Stakeholder?
 
-o CFO da Rossmann.
+O CFO da Rossmann.
 
 ### Qual será o formato da solução?
 
@@ -88,7 +88,7 @@ H10    |     Verdadeira | Alta
 H11    |      Verdadeira |  Alta
 H12    |      Verdadeira |  Baixa
 
-As hipóteses não confirmadas que podem gerar __insights__ importantes para o negócio. 
+Hipóteses confirmadas que podem gerar __insights__ valiosos para o negócio: 
 * __1.__ As lojas com maior sortimento não vendem mais que as lojas com menor sortimento.
 * __2.__ As lojas com concorrentes mais próximos vendem mais.
 * __3.__ As lojas vendem menos nas férias escolares, exceto nos meses de julho e agosto.
