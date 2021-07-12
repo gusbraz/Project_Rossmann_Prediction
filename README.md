@@ -1,4 +1,4 @@
-<h1 align="center">Projeto de Ciência de Dados - Regressão Linear</h1>
+<h1 align="center">Projeto de Ciência de Dados - Regressão</h1>
 
 Esse projeto é baseado na competição do kaggle - Rossmann Store Sales, disponivel no link: https://www.kaggle.com/c/rossmann-store-sales
 
