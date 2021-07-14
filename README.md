@@ -28,7 +28,7 @@ __Granularidade:__ previsão por loja do valor total de vendas diárias acumulad
 
 __Tipo de problema:__ previsão de vendas.
 
-__Potencias métodos:__ Regressão linear e séries temporais com algumas modificações.
+__Potencias métodos:__ Regressão e Séries Temporais com algumas modificações.
 
 __Formato da entrega:__ 
 * Entregar relatório com o valor total de vendas diárias acumulada durante as próximas 6 semanas.
